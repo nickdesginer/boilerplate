@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express();
 const userController = require("../controller/userController");
-const { verifyToken } = require('../../helper/jwt');
+const { verifyToken } = require('../../helper/middlewares/jwt');
 const { userCreateValidate,userupdateValidate } = require('../../helper/validation');
 router.post('', userCreateValidate,
     async (req, res) => {

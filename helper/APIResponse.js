@@ -1,18 +1,11 @@
-/**
- * RESPONSE COMMON MODULE
- */
 function Response() {
     this.code = 200;
     this.success = true;
     this.message = "";
     this.data = [];
     this.err = [];
-
 }
 
-/**
- * GET RESPONSE
- */
 function ResponseGet() {
     this.code = 200;
     this.success = true;
@@ -22,14 +15,7 @@ function ResponseGet() {
     this.pagination = {};
 }
 
-/**
- * SUCCESS GET RESPONSE WITH PAGINATION
- * @param {string} message 
- * @param {array} payload 
- * @param {array} err 
- * @param {object} pagination 
- * @returns object
- */
+
 function successGetResponse(message, payload, err, pagination) {
     let response = new ResponseGet();
     response.code = 200;
@@ -42,13 +28,7 @@ function successGetResponse(message, payload, err, pagination) {
 
 }
 
-/**
- *SUCCESS CREATE RESPONSE
- * @param {string} message 
- * @param {array} payload 
- * @param {array} err 
- * @returns object
- */
+
 function successCreateResponse(message, payload, err) {
     let res = new Response();
     res.code = 201;
@@ -59,13 +39,7 @@ function successCreateResponse(message, payload, err) {
     return res;
 }
 
-/**
- * SUCCESS RESPONSE 
- * @param {string} message 
- * @param {array} payload 
- * @param {array} err 
- * @returns object
- */
+
 function successResponse(message, payload, err) {
     let res = new Response();
     res.code = 200;
@@ -76,13 +50,7 @@ function successResponse(message, payload, err) {
     return res;
 }
 
-/**
- * ERROR RESPONSE 
- * @param {string} message 
- * @param {array} payload 
- * @param {array} err 
- * @returns object
- */
+
 function failResponse(message, payload, err) {
     let res = new Response();
     res.code = 400;
@@ -93,13 +61,7 @@ function failResponse(message, payload, err) {
     return res;
 }
 
-/**
- * ERROR OBJECT RESPONSE
- * @param {STRING} message 
- * @param {STRING} param 
- * @param {STRING} location 
- * @returns 
- */
+
 function resObj(code, message) {
     let resObj = {
         "code": code,

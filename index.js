@@ -15,7 +15,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 require("./src/routes/index")(app);
-
 http.listen(PORT, () => {
     console.log(`Express server is running on port ${PORT}`);
 })
